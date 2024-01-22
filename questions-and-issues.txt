@@ -1,1 +1,7 @@
+What are the general steps to set up a game development project?
 
+What game/graphic engines to use; cost/benefits of each?
+
+Would it be more fitting to do the puzzles in 3d or 2d?
+
+What do you want to see in a puzzle game?
