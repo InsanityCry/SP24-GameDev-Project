@@ -6,28 +6,28 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody selfRB;
-    private int speed = 10;
+    public Camera selfCam;
+    public Transform selfLoc;
 
-    public 
-
+    private float LRMove;
+    private float FBMove;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        selfLoc = GetComponent<Transform>();
+        selfCam = GetComponentInChildren<Camera>();
+        selfRB = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void Move()
-    {
-    
-        Vector3 Movement = new Vector3 (Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-    
-        transform.position += Movement * speed * Time.deltaTime;
-    
+        LRMove = Input.GetAxis("Horizontal");
+        FBMove = Input.GetAxis("Vertical");
+        float moveX = LRMove * 100 * Time.deltaTime;
+        float moveZ = FBMove * 100 * Time.deltaTime;
+        selfRB.velocity = new Vector3(moveX, 0, moveZ);
+        selfLoc.rotation = new Quaternion(0, 0, 0, 0);
     }
 }
