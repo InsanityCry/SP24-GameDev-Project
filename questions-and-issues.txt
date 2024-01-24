@@ -5,3 +5,5 @@ What game/graphic engines to use; cost/benefits of each?
 Would it be more fitting to do the puzzles in 3d or 2d?
 
 What do you want to see in a puzzle game?
+
+How what is the most important thing when it comes to making a game? scene, gameplay, mechanics?
